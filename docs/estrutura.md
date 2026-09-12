@@ -36,19 +36,24 @@ Nada definido ainda. Candidatos naturais conforme o site crescer:
 - Repositório: https://github.com/dLcch/dlld.me
 - Publicação: GitHub Pages, origem "GitHub Actions" (necessária para a data
   automática do rodapé)
-- Endereço provisório: https://dlcch.github.io/dlld.me/
+- Endereço: https://dlld.me (www redireciona para o domínio limpo)
+- Endereço alternativo: https://dlcch.github.io/dlld.me/
 - Domínio: dlld.me, registrado e com DNS na GoDaddy
+- Certificado HTTPS emitido pelo GitHub, cobrindo dlld.me e www.dlld.me
 
-### Pendência: verificação do domínio
+### Domínio verificado
 
-O GitHub recusa `dlld.me` como domínio personalizado com a mensagem
-"already taken" — outra conta reivindicou o domínio no passado, provavelmente
-um dono anterior. A saída é a verificação de domínio em
-github.com/settings/pages, que exige um registro TXT
-`_github-pages-challenge-dlcch`. Depois de verificado, o domínio fica travado
-para esta conta e ninguém mais consegue apontá-lo para outro site no GitHub.
+O GitHub recusava `dlld.me` como domínio personalizado com a mensagem
+"already taken": outra conta havia reivindicado o domínio no passado,
+provavelmente um dono anterior. Resolvido pela verificação de domínio em
+github.com/settings/pages (registro TXT `_github-pages-challenge-dLcch`),
+concluída em 12/09/2026. O domínio agora está travado nesta conta — ninguém
+mais consegue apontá-lo para outro site no GitHub.
 
-DNS a configurar na GoDaddy:
+**Não remover o registro TXT de verificação.** Se ele sumir do DNS, a
+verificação cai e o domínio volta a ficar disponível para qualquer um.
+
+DNS configurado na GoDaddy:
 
 | Tipo | Nome | Valor |
 |---|---|---|
@@ -57,10 +62,10 @@ DNS a configurar na GoDaddy:
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
 | CNAME | www | dlcch.github.io |
-| TXT | _github-pages-challenge-dlcch | (fornecido pelo GitHub) |
+| TXT | _github-pages-challenge-dLcch | (fornecido pelo GitHub) |
 
-Os dois registros A do estacionamento da GoDaddy (76.223.105.230 e
-13.248.243.5) precisam sair.
+O registro A do WebsiteBuilder da GoDaddy foi removido. Os registros NS, SOA,
+`_domainconnect` e `TXT _dmarc` permanecem intocados.
 
 ## Decisões tomadas
 
