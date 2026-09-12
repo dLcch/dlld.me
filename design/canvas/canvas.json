@@ -1,0 +1,10 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "dlld.me — desktop", "x": 0, "y": 0, "w": 960, "h": 900 },
+    { "file": "Mobile.dc.html", "title": "dlld.me — celular", "x": 1080, "y": 0, "w": 390, "h": 940 }
+  ],
+  "annotations": [
+    { "id": "nota-v01", "x": 0, "y": -130, "w": 600, "text": "v0.1 — direção B, ficha técnica.\nMesma página em duas larguras. A data e o número de versão no rodapé são gerados na publicação." }
+  ],
+  "launch": { "view": "canvas" }
+}
