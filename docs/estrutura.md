@@ -31,6 +31,37 @@ Nada definido ainda. Candidatos naturais conforme o site crescer:
 - Escritos
 - Contato
 
+## Infraestrutura
+
+- Repositório: https://github.com/dLcch/dlld.me
+- Publicação: GitHub Pages, origem "GitHub Actions" (necessária para a data
+  automática do rodapé)
+- Endereço provisório: https://dlcch.github.io/dlld.me/
+- Domínio: dlld.me, registrado e com DNS na GoDaddy
+
+### Pendência: verificação do domínio
+
+O GitHub recusa `dlld.me` como domínio personalizado com a mensagem
+"already taken" — outra conta reivindicou o domínio no passado, provavelmente
+um dono anterior. A saída é a verificação de domínio em
+github.com/settings/pages, que exige um registro TXT
+`_github-pages-challenge-dlcch`. Depois de verificado, o domínio fica travado
+para esta conta e ninguém mais consegue apontá-lo para outro site no GitHub.
+
+DNS a configurar na GoDaddy:
+
+| Tipo | Nome | Valor |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | dlcch.github.io |
+| TXT | _github-pages-challenge-dlcch | (fornecido pelo GitHub) |
+
+Os dois registros A do estacionamento da GoDaddy (76.223.105.230 e
+13.248.243.5) precisam sair.
+
 ## Decisões tomadas
 
 | Data | Decisão | Motivo |
@@ -42,3 +73,4 @@ Nada definido ainda. Candidatos naturais conforme o site crescer:
 | 2026-09-12 | Direção visual: ficha técnica, não terminal escuro | A página não é só profissional; o visual não pode fechar a leitura |
 | 2026-09-12 | Família na frase de apresentação, não na ficha | Gente numa linha de tabela vira inventário |
 | 2026-09-12 | O site não tem molde: o critério é "vale ser público?" | Declarado na própria página, terceira linha da apresentação |
+| 2026-09-12 | Caminhos de assets relativos, não absolutos | Absolutos quebram em qualquer endereço que não seja a raiz do domínio |
